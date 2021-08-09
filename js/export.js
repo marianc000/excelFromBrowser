@@ -4,15 +4,15 @@ export function saveToXlsx(data) {
 }
 
 function createXlsx(XLSX, data) {
-    var fileName = "export.xlsx";
-    var sheetName = "SheetJS";
-
+    // create new workbook 
     var wb = XLSX.utils.book_new();
+
+    // converts an array of arrays into a worksheet.
     var ws = XLSX.utils.aoa_to_sheet(data);
 
-    /* add worksheet to workbook */
-    XLSX.utils.book_append_sheet(wb, ws, sheetName);
+    // add worksheet to workbook under name Sheet1
+    XLSX.utils.book_append_sheet(wb, ws, "Sheet1");
 
-    /* write workbook */
-    XLSX.writeFile(wb, fileName);
+    // save workbook to file export.xlsx
+    XLSX.writeFile(wb, "export.xlsx");
 }
