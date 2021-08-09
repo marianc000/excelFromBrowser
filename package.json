@@ -1,0 +1,17 @@
+{
+  "name": "excelfrombrowser",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "copyfiles --error --flat node_modules/xlsx/dist/xlsx.mini.min.js lib"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "xlsx": "^0.17.0"
+  },
+  "devDependencies": {
+    "copyfiles": "^2.4.1"
+  }
+}
